@@ -18,6 +18,10 @@ namespace InsuranceAPIApplication.BusinessEntities
 
         [ForeignKey("CustomerGuid")]
         public virtual Customer Customer { get; set; }
+        [Column("InsuranceCategoryGuid")]
+        public Guid InsuranceCategoryGuid { get; set; }
+        [ForeignKey("InsuranceCategoryGuid")]
+        public virtual List<InsuranceCategory> InsuranceCategory { get; set; }
 
         public string InvoiceNumber { get; set; }
         public DateTime InterventionDateFrom { get; set; }
@@ -28,7 +32,7 @@ namespace InsuranceAPIApplication.BusinessEntities
         public DateTime? TakenDate { get; set; }
         public DateTime? CompletedDate { get; set; }
         public Guid? CompletedBy { get; set; }
-        public DateTime? ExpiredDate { get; set; }
+        public bool IsExpiredDate { get; set; }
         public DateTime? ArchivedDate { get; set; }
         public Guid? ArchivedBy { get; set; }
         public string Note { get; set; }

@@ -17,7 +17,7 @@ namespace InsuranceAPIApplication.Context
         public DbSet<InsuranceClaim> InsuranceClaims { get; set; }
         public DbSet<InsuranceInvoice> InsuranceInvoices { get; set; }
         public DbSet<InsuranceInvoiceClaimLink> InsuranceInvoiceClaimLinks { get; set; }
-        public DbSet<User> Users { get; set; }
+        public DbSet<UserDTO> Users { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<Notification> Notifications { get; set; }
     }
