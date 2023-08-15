@@ -13,6 +13,6 @@ namespace InsuranceAPIApplication.BusinessEntities
         public string RoleName { get; set; }
         public DateTime ArchivedDate { get; set; }
         public Guid ArchivedBy { get; set; }
-        public virtual List<User> Users { get; set; }
+        public virtual List<UserDTO> Users { get; set; }
     }
 }
